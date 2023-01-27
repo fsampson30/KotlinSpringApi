@@ -1,5 +1,6 @@
 package com.sampson.KotlinApi.service
 
+import com.sampson.KotlinApi.exception.BadRequestException
 import com.sampson.KotlinApi.model.Employee
 import com.sampson.KotlinApi.repository.EmployeeRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -21,12 +22,16 @@ class EmployeeService() {
         return employeeRepository.findById(id)
     }
 
+    fun getEmployeeByIdOrThrow(id: Long) : Employee{
+        return employeeRepository.findById(id).orElseThrow{BadRequestException()}
+    }
+
     fun saveEmployee(employee: Employee) : Employee{
         return employeeRepository.save(employee)
     }
 
     fun deleteEmployee(id: Long)  {
-        return employeeRepository.delete(employeeRepository.findById(id).get())
+        return employeeRepository.delete(getEmployeeByIdOrThrow(id))
     }
 
 }
