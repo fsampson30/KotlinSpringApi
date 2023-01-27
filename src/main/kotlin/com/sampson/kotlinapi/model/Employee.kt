@@ -1,4 +1,4 @@
-package com.sampson.kotlinapi.model
+package com.sampson.KotlinApi.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue

@@ -1,6 +1,6 @@
-package com.sampson.kotlinapi.repository
+package com.sampson.KotlinApi.repository
 
-import com.sampson.kotlinapi.model.Employee
+import com.sampson.KotlinApi.model.Employee
 import org.springframework.data.jpa.repository.JpaRepository
 
 
