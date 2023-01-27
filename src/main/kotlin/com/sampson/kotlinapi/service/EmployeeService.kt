@@ -1,6 +1,7 @@
-package com.sampson.kotlinapi.service
+package com.sampson.KotlinApi.service
 
-import com.sampson.kotlinapi.model.Employee
+
+import com.sampson.KotlinApi.model.Employee
 import com.sampson.kotlinapi.repository.EmployeeRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -19,6 +20,10 @@ class EmployeeService() {
 
     fun getEmployeeById(id: Long) : Optional<Employee>{
         return employeeRepository.findById(id)
+    }
+
+    fun saveEmployee(employee: Employee) : Employee{
+        return employeeRepository.save(employee)
     }
 
 }
