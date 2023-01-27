@@ -1,7 +1,7 @@
-package com.sampson.KotlinApi.service
+package com.sampson.kotlinapi.service
 
-import com.sampson.KotlinApi.model.Employee
-import com.sampson.KotlinApi.repository.EmployeeRepository
+import com.sampson.kotlinapi.model.Employee
+import com.sampson.kotlinapi.repository.EmployeeRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.Optional
